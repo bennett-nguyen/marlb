@@ -52,6 +52,7 @@ Any character in the list below will play a specific note
 
 **Functional commands**:
 Any character in the list below will do a certain task to affect how notes are played
+<br>
 `+`: Increase pitch level (meaning the pitch of the note will get higher)
 <br>
 `-`: Decrease pitch level (meaning the pitch of the note will get lower)
