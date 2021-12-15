@@ -1,3 +1,6 @@
+" A test script file for this language
+" Song by Louie Zong
+
 " Hello, World!
 >>>rq>>>>>>>>u
 :!!
