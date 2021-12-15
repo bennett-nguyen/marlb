@@ -14,9 +14,10 @@ Interpret a file to sounds using the command:
 <br>
 `python random_proj.py -m interpret -f path/to/file`
 <br>
-In this case, it's `hello_world.txt` so do:
+There's a script file I wrote in the repository, it's `hello_world.txt` so do:
 <br>
 `python random_proj.py -m interpret -f hello_world.txt`
+<br>to run the script file
 
 # Syntax
 **Comment**: notated using `"`, any code that stands after `"` will be ignored (although any character that this program doesn't recognize will be considered as a comment as well, using a comment notation is still a best practice)
@@ -28,28 +29,32 @@ Any character in the list below will play a specific note
 <br>
 `a`: C#
 <br>
+<br>
 `w`: D
 <br>
 `s`: D#
 <br>
-
-
-
+<br>
 `e`: E
+<br>
 <br>
 `r`: F
 <br>
 `d`: F#
 <br>
+<br>
 `u`: G
 <br>
 `j`: G#
+<br>
 <br>
 `i`: A
 <br>
 `k`: A#
 <br>
+<br>
 `o`: B
+<br>
 <br>
 `p`: C (higher pitch)
 
@@ -91,7 +96,7 @@ You'll also notice that the 3rd D note on the 3rd line is higher than other D's 
 <br>
 ![image](https://user-images.githubusercontent.com/83117848/146194988-243c9a19-5add-41bb-ba16-bd0c54bfb2da.png)
 <br>
-But there's no break between each line so when you play it, you'll hear notes being played continuously; to prevent that, add a `!` so the program will sleep `0.5` seconds after each line.
+But there's no break between each line so when you play it, you'll hear notes being played continuously; to prevent that, add a `!` at the end of each line so the program will sleep `0.5` seconds before executing the next line.
 <br>
 ![image](https://user-images.githubusercontent.com/83117848/146197160-855f5577-ef45-4f87-ae49-e38678258c23.png)
 <br>
