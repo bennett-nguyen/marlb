@@ -12,11 +12,11 @@ Platform: Windows 10
 <br>
 Interpret a file to sounds using the command:
 <br>
-`python random_proj -m interpret -f path/to/file`
+`python random_proj.py -m interpret -f path/to/file`
 <br>
 In this case, it's `hello_world.txt` so do:
 <br>
-`python random_proj -m interpret -f hello_world.txt`
+`python random_proj.py -m interpret -f hello_world.txt`
 
 # Syntax
 **Comment**: notated using `"`, any code that stands after `"` will be ignored (although any character that this program doesn't recognize will be considered as a comment as well, using a comment notation is still a best practice)
