@@ -78,7 +78,7 @@ Any character in the list below will do a certain task to affect how notes are p
 `:`: Reset duration to `300ms` and pitch level to `2`
 # Update
 - Added `debug` option: use this option to see more verbose logging informations about the execution of the program, usage: `python marlb.py -m debug -f path/to/file`
-- Added a feature to pre-process raw code (code taken from the script file) to remove any newline characters, whitespaces, comments
+- Added a feature to pre-process raw code (code taken from the script file) to remove any newline characters, whitespaces, and comments
 
 
 # Tutorial
