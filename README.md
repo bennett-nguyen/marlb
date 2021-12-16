@@ -1,5 +1,5 @@
 # marlb
-A minimal estorical programming language for making simple melodies. The name is suggested by my friend LOL!
+A minimal esoteric programming language for making simple melodies. The name is suggested by my friend LOL!
 
 # Getting Started
 ```
