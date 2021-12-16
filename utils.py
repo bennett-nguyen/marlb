@@ -6,6 +6,7 @@ info = {
     "pitch_level": 2
 }
 
+# Pitch of each note (Hz)
 A = 440
 Asharp = 466
 B = 494
@@ -51,14 +52,19 @@ functional_commands = {
     "<": command.decrease_duration,
     ">": command.increase_duration,
     ":": command.reset
-
 }
 
-def interpret(code):
+def interpret(code, mode):
     for line in code:
-        for char in line:
+        
+        line_number, content = line
+
+        if mode == "debug":
+            print(f"\nexecuting line {line_number}: {content}")
+
+        for char in content:
             if char in note_keys:
                 winsound.Beep(note_keys[char] * info['pitch_level'], info["duration"])
             
             elif char in functional_commands:
-                functional_commands[char](info)
+                functional_commands[char](info=info, mode=mode)
