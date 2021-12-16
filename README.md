@@ -87,7 +87,7 @@ I have a music sheet down here so you don't have to waste your time doing it.
 <br>
 ![image](https://user-images.githubusercontent.com/83117848/146189003-d1b1dac5-d673-43ff-a517-13e5975f21ee.png)
 
-Convert each note to marlb [command](https://github.com/bennett-nguyen/marlb#syntax) (e.g D will be converted to `w`, E will be converted to `e`, etc.), you can seperate each line of lyrics and space out each command for readability.
+Convert each note to marlb [command](https://github.com/bennett-nguyen/marlb#syntax) (e.g D will be converted to `w`, E will be converted to `e`, etc.), you can seperate each line of lyric and space out each command for readability.
 <br>
 <br>
 ![image](https://user-images.githubusercontent.com/83117848/146194381-b44b5e80-d544-4b97-99f6-5cd48bc3c037.png)
