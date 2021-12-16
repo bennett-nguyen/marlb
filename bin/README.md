@@ -1,8 +1,8 @@
 # Executable Version
 This is the executable version of the interpreter that doesn't require you to have python or any python package installed.
 
-# Usage
-Copy the path lead to the bin folder (which contains this executable interpreter) to the enviroment variable Windows settings so you can access it anywhere you wanted. For example, here is my `bin` folder path: `D:\work_dir_3\bin`
+# Make this interpreter accessible on anywhere
+To make this interpreter accessible on the command prompt, copy the path lead to the bin folder (which contains this executable interpreter) and paste it to the enviroment variable Windows settings. For example, here is my `bin` folder path: `D:\work_dir_3\bin`
 
 Open Settings > Systems > About > Advanced system settings
 <br><br>
