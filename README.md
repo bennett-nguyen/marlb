@@ -12,12 +12,12 @@ Platform: Windows 10
 <br>
 Interpret a file to sounds using the command:
 <br>
-`python random_proj.py -m interpret -f path/to/file`
+`python marlb.py -m interpret -f path/to/file`
 <br>
 <br>
-There's a script file I wrote in this repository, it's `hello_world.txt` so do:
+There's a script file I wrote in this repository, it's `hello_world.marble` so do:
 <br>
-`python random_proj.py -m interpret -f hello_world.txt`
+`python marlb.py -m interpret -f hello_world.marble`
 <br>to run the script file
 
 # Syntax
@@ -73,6 +73,10 @@ Any character in the list below will do a certain task to affect how notes are p
 `!`: Stop the execution for 0.5 seconds
 <br>
 `:`: Reset duration to `300ms` and pitch level to `2`
+# Update
+- Added `debug` option: use this option to see more verbose logging informations about the execution of the program, usage: `python marlb.py -m debug -f path/to/file`
+- Added a feature to pre-process raw code (code taken from the script file) to remove any newline characters, whitespaces, comments
+
 
 # Tutorial
 Today I'll instruct you to write happy birthday in marlb for someone important to you :D
@@ -80,7 +84,7 @@ Today I'll instruct you to write happy birthday in marlb for someone important t
 I'll assume that you have cloned this repository and got the interpreter so let's get started.
 <br>
 <br>
-First, create a text file (in any directory you want) and open that file with your prefered text editor.
+First, create a `*.marble` file (with any name that doesn't contain whitespaces and in any directory you want) and open that file with your prefered text editor.
 <br>
 Then, get the music sheet of this song so you can convert each note in that song to marlb code<br>
 <br>
@@ -93,7 +97,7 @@ Convert each note to marlb [command](https://github.com/bennett-nguyen/marlb#syn
 <br>
 ![image](https://user-images.githubusercontent.com/83117848/146194381-b44b5e80-d544-4b97-99f6-5cd48bc3c037.png)
 <br>
-You'll also notice that the 3rd D note on the 3rd line is higher than other D's notes; to deal with that, increase the pitch level by 2 for that note then decrease it after that like this:
+You'll also notice that the 3rd D note on the 3rd line is higher than other D's; to deal with that, increase the pitch level by 2 for that note then decrease it after that like this:
 <br>
 ![image](https://user-images.githubusercontent.com/83117848/146194988-243c9a19-5add-41bb-ba16-bd0c54bfb2da.png)
 <br>
@@ -103,7 +107,7 @@ But there's no break between each line so when you play it, you'll hear notes be
 <br>
 Now save your file and copy the path that leads to your file as text and open `powershell` (or `command prompt`), then `cd` into the directory that the cloned repository is located. Interpret your text file using this command:
 <br>
-`python random_proj.py -m interpret -f paste/the/path/here` 
+`python marlb.py -m interpret -f paste/the/path/here` 
 <br>
 <br>
 In my case, both the interpreter and my text file are in `D:\work_dir_3` so my command would be like:
@@ -111,7 +115,7 @@ In my case, both the interpreter and my text file are in `D:\work_dir_3` so my c
 ```
 >>> D:\
 >>> cd work_dir_3
->>> python random_proj.py -m interpret -f ./happy_birthday.txt
+>>> python marlb.py -m interpret -f ./happy_birthday.marble
 ```
 (You can use an absolute path or relative path that leads to your file as well)
 <br>
