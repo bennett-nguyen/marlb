@@ -10,6 +10,9 @@ Platform: Windows 10
 `git clone https://github.com/bennett-nguyen/marlb.git`
 <br>
 <br>
+File extension: `*.marble`
+<br>
+<br>
 Interpret a file to sounds using the command:
 <br>
 `python marlb.py -m interpret -f path/to/file`
@@ -21,7 +24,7 @@ There's a script file I wrote in this repository, it's `hello_world.marble` so d
 <br>to run the script file
 
 # Syntax
-**Comment**: notated using `"`, any code that stands after `"` will be ignored (although any character that this program doesn't recognize will be considered as a comment as well, using a comment notation is still a best practice)
+**Comment**: notated using `"`, any code that stands after `"` will be ignored (although any character that this interpreter doesn't recognize will be considered as a comment as well, using a comment notation is still a best practice)
 <br><br>
 **Playing notes**:
 Any character in the list below will play a specific note
