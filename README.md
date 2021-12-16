@@ -14,7 +14,8 @@ Interpret a file to sounds using the command:
 <br>
 `python random_proj.py -m interpret -f path/to/file`
 <br>
-There's a script file I wrote in the repository, it's `hello_world.txt` so do:
+<br>
+There's a script file I wrote in this repository, it's `hello_world.txt` so do:
 <br>
 `python random_proj.py -m interpret -f hello_world.txt`
 <br>to run the script file
