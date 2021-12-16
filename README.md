@@ -105,7 +105,7 @@ Now save your file and copy the path that leads to your file as text and open `p
 `python random_proj.py -m interpret -f paste/the/path/here` 
 <br>
 <br>
-In my case, both the interpreter and my text file is in `D:\work_dir_3` so my command would be like:
+In my case, both the interpreter and my text file are in `D:\work_dir_3` so my command would be like:
 <br>
 ```
 >>> D:\
