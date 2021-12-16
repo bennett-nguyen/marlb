@@ -21,6 +21,6 @@ Double click `Path` on `User variables` section > Click `New` > Paste in the pat
 <br><br>
 ![image](https://user-images.githubusercontent.com/83117848/146328975-73b29826-b3a8-4e79-97e2-aa816d687f10.png)
 <br><br>
-Press `ok` to save it then open your command prompt (or powershell) and run `marlb` and you'll see this message pops up
+Press `OK` to save it then open your command prompt (or powershell) and run `marlb` and you'll see this message pops up
 <br><br>
 ![image](https://user-images.githubusercontent.com/83117848/146329716-e98e7e2d-2aed-4b97-9edf-2f955774ecf2.png)
