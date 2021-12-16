@@ -112,7 +112,7 @@ In my case, my text file is in `D:\work_dir_3` so my command would be like:
 >>> cd work_dir_3
 >>> python random_proj.py -m interpret -f ./happy_birthday.txt
 ```
-(You can use an absolute path or relative to your file as well)
+(You can use an absolute path or relative path to your file as well)
 <br>
 <br>
 Press enter and enjoy your music :]
