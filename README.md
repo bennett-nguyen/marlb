@@ -107,7 +107,11 @@ Now save your file and open `powershell` (or `command prompt`), then `cd` into t
 <br>
 In my case, my text file is in `D:\work_dir_3` so my command would be like:
 <br>
-`python random_proj.py -m interpret -f D:\work_dir_3\happy_birthday.txt`
+```
+>>> D:\
+>>> cd work_dir_3
+>>> python random_proj.py -m interpret -f ./happy_birthday.txt
+```
 <br>
 <br>
 Press enter and enjoy your music :]
