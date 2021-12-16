@@ -100,19 +100,19 @@ But there's no break between each line so when you play it, you'll hear notes be
 <br>
 ![image](https://user-images.githubusercontent.com/83117848/146197160-855f5577-ef45-4f87-ae49-e38678258c23.png)
 <br>
-Now save your file and open `powershell` (or `command prompt`), then `cd` into the directory that the cloned repository is located. Interpret your text file using this command:
+Now save your file and copy the path that leads to your file as text and open `powershell` (or `command prompt`), then `cd` into the directory that the cloned repository is located. Interpret your text file using this command:
 <br>
-`python random_proj.py -m interpret -f path/to/file` 
+`python random_proj.py -m interpret -f paste/the/path/here` 
 <br>
 <br>
-In my case, my text file is in `D:\work_dir_3` so my command would be like:
+In my case, both the interpreter and my text file is in `D:\work_dir_3` so my command would be like:
 <br>
 ```
 >>> D:\
 >>> cd work_dir_3
 >>> python random_proj.py -m interpret -f ./happy_birthday.txt
 ```
-(You can use an absolute path or relative path to your file as well)
+(You can use an absolute path or relative path that leads to your file as well)
 <br>
 <br>
 Press enter and enjoy your music :]
