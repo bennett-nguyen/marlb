@@ -11,6 +11,10 @@ args = parser.parse_args()
 
 def path_parser():
     path = args.file.split("\\") if "\\" in args.file else args.file.split("/")
+    
+    if not path[-1]:
+        path.pop()
+        
     file_name = path[-1]
 
     invalid_characters = ['"', '~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')' ',', '+', '{', '}', '\\', '"', '|', '<', '>', '?', '`', '=', '[', ']', ';' "'", '\\', '/']
@@ -62,7 +66,11 @@ def path_parser():
     except FileNotFoundError:
         print(f"error: file '{file_name}' not found in {os.getcwd()}")
         return
+    except ValueError:
+        print(f"error: '{file_name}' is not recognize as a file")
+        return
+    except KeyboardInterrupt:
+        print("error: proccess has been interupted")
 
 if __name__ == "__main__":
     path_parser()
-
