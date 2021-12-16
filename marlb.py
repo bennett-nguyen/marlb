@@ -9,14 +9,11 @@ parser.add_argument("-f", "--file", required=True, help="File to interpret, pass
 
 args = parser.parse_args()
 
-
-
-
 def path_parser():
     path = args.file.split("\\") if "\\" in args.file else args.file.split("/")
     file_name = path[-1]
 
-    invalid_characters = ['"', '~', '!', '@', '#', '$', '%', '^' '&', '*', '(', ')' ',', '+', '{', '}', '\\', '"', '|' '<' '>', '?', '`', '=', '[', ']', ';' "'", '\\', '/']
+    invalid_characters = ['"', '~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')' ',', '+', '{', '}', '\\', '"', '|', '<', '>', '?', '`', '=', '[', ']', ';' "'", '\\', '/']
     
     for entry in path:
         if any(char in entry for char in invalid_characters):
@@ -32,34 +29,40 @@ def path_parser():
                 return
     
     try:
+        if not file_name.endswith(".marble"):
+            print(f"error: invalid file extension '{file_name[file_name.index('.'):]}'\nvalid extension: '*.marble'")
+            return
+
         with open(f"./{file_name}", "r") as f:
             raw_code = f.readlines()
             pre_processed_code = []
             
-            for line in raw_code:
-                # remove comments and whitespaces
+            for line_number, content in enumerate(raw_code, start=1):
                 try:
-                    line = "".join(line[:line.index('"')].split())
-                    if not line or "\n" in line:
-                        continue
+                    content = "".join(content[:content.index('"')].split())
                     
-                    pre_processed_code.append(line)
+                    if not content:
+                        continue
+
+                    pre_processed_code.append((line_number, content))
 
                 except ValueError:
-                    pre_processed_code.append(line.strip())
-                
-            
+                    if len(content) == 1 and "\n" in content:
+                        continue
 
-              
-            match args.mode:
-                case "interpret":
-                    interpret(pre_processed_code)
-                case "debug":
-                    pass
+                    content = "".join(content.split())
+                    
+                    if "\n" in content:
+                        content = content[:-1]
+                    
+                    pre_processed_code.append((line_number, content))
+                
+            interpret(pre_processed_code, args.mode)
 
     except FileNotFoundError:
         print(f"error: file '{file_name}' not found in {os.getcwd()}")
         return
 
-path_parser()
+if __name__ == "__main__":
+    path_parser()
 
