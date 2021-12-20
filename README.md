@@ -74,7 +74,7 @@ default:
 <br>
 `-`: Decrease pitch level by `1` (meaning the pitch of the note will get lower, min level: `1`)
 <br>
-`>`: Increase duration by `100` (meaning the length of playing a note will increased, max duration: `15s`)
+`>`: Increase duration by `100` (meaning the length of playing a note will increase, max duration: `15s`)
 <br>
 `<`: Decrease duration by `100` (meaning the length of playing a note will decrease, min duration: `0ms`)
 <br>
@@ -126,6 +126,7 @@ In my case, both the interpreter and my text file are in `D:\work_dir_3` so my c
 >>> python marlb.py -m interpret -f ./happy_birthday.marble
 ```
 (If your file name has a whitespace character then put it in quotes when you're about to interpret it e.g `python marlb.py -m interpret -f "path/to/file"`)
+<br>
 (You can use an absolute path or relative path that leads to your file as well)
 <br>
 <br>
