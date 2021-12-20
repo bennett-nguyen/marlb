@@ -14,8 +14,8 @@ def path_parser():
     
     if not path[-1]:
         path.pop()
-        
-    file_name = path[-1]
+
+    file_name = path[-1]    
 
     invalid_characters = ['"', '~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')' ',', '+', '{', '}', '\\', '"', '|', '<', '>', '?', '`', '=', '[', ']', ';' "'", '\\', '/']
     
@@ -30,6 +30,9 @@ def path_parser():
                 os.chdir(entry)
             except FileNotFoundError:
                 print(f"error: directory '{entry}' doesn't exist in {os.getcwd()}")
+                return
+            except OSError:
+                print(f"error: invalid syntax '{args.file}'")
                 return
     
     try:
@@ -67,10 +70,11 @@ def path_parser():
         print(f"error: file '{file_name}' not found in {os.getcwd()}")
         return
     except ValueError:
-        print(f"error: '{file_name}' is not recognize as a file")
+        print(f"error: '{file_name}' is not recognized as a file")
         return
     except KeyboardInterrupt:
-        print("error: proccess has been interupted")
+        print("error: proccess has been interrupted")
+        return
 
 if __name__ == "__main__":
     path_parser()
