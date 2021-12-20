@@ -70,13 +70,13 @@ default:
   pitch_level: 2
   duration: 200
 ```
-`+`: Increase pitch level (meaning the pitch of the note will get higher)
+`+`: Increase pitch level by `1` (meaning the pitch of the note will get higher, max level: `16`)
 <br>
-`-`: Decrease pitch level (meaning the pitch of the note will get lower)
+`-`: Decrease pitch level by `1` (meaning the pitch of the note will get lower, min level: `1`)
 <br>
-`>`: Increase duration (meaning the length of playing a note will increased)
+`>`: Increase duration by `100` (meaning the length of playing a note will increased, max duration: `15s`)
 <br>
-`<`: Decrease duration (meaning the length of playing a note will decrease)
+`<`: Decrease duration by `100` (meaning the length of playing a note will decrease, min duration: `0ms`)
 <br>
 `!`: Stop the execution for 0.5 seconds
 <br>
