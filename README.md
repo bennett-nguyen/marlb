@@ -87,7 +87,7 @@ Today I'll instruct you to write happy birthday in marlb for someone important t
 I'll assume that you have cloned this repository and got the interpreter so let's get started.
 <br>
 <br>
-First, create a `*.marble` file (with any name that doesn't contain whitespaces and in any directory you want) and open that file with your prefered text editor.
+First, create a file that ends with `.marble` (in any directory you want). Open that file with your prefered text editor.
 <br>
 Then, get the music sheet of this song so you can convert each note in that song to marlb code<br>
 <br>
@@ -110,7 +110,7 @@ But there's no break between each line so when you play it, you'll hear notes be
 <br>
 Now save your file and copy the path that leads to your file as text and open `powershell` (or `command prompt`), then `cd` into the directory that the cloned repository is located. Interpret your text file using this command:
 <br>
-`python marlb.py -m interpret -f paste/the/path/here` 
+`python marlb.py -m interpret -f paste/the/path/here`
 <br>
 <br>
 In my case, both the interpreter and my text file are in `D:\work_dir_3` so my command would be like:
@@ -120,6 +120,7 @@ In my case, both the interpreter and my text file are in `D:\work_dir_3` so my c
 >>> cd work_dir_3
 >>> python marlb.py -m interpret -f ./happy_birthday.marble
 ```
+(If your file name has a whitespace character then put it in quotes when you're about to interpret it e.g `python marlb.py -m interpret -f "path/to/file"`)
 (You can use an absolute path or relative path that leads to your file as well)
 <br>
 <br>
