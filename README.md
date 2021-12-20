@@ -65,6 +65,11 @@ Any character in the list below will play a specific note
 **Functional commands**:
 Any character in the list below will do a certain task to affect how notes are played
 <br>
+```
+default:
+  pitch_level: 2
+  duration: 200
+```
 `+`: Increase pitch level (meaning the pitch of the note will get higher)
 <br>
 `-`: Decrease pitch level (meaning the pitch of the note will get lower)
@@ -75,7 +80,7 @@ Any character in the list below will do a certain task to affect how notes are p
 <br>
 `!`: Stop the execution for 0.5 seconds
 <br>
-`:`: Reset duration to `300ms` and pitch level to `2`
+`:`: Reset `duration` and `pitch_level` to `default` (i.e `pitch_level: 2`, `duration: 200`)
 # Update
 - Added `debug` option: use this option to see more verbose logging informations about the execution of the program, usage: `python marlb.py -m debug -f path/to/file`
 - Added a feature to pre-process raw code (code taken from the script file) to remove any newline characters, whitespaces, and comments
