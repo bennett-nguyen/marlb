@@ -9,38 +9,16 @@ parser.add_argument("-f", "--file", required=True, help="File to interpret, pass
 
 args = parser.parse_args()
 
-def path_parser():
-    path = args.file.split("\\") if "\\" in args.file else args.file.split("/")
-    
-    if not path[-1]:
-        path.pop()
+def processor(file_name):
+    if not file_name:
+        return
 
-    file_name = path[-1]    
-
-    invalid_characters = ['"', '~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')' ',', '+', '{', '}', '\\', '"', '|', '<', '>', '?', '`', '=', '[', ']', ';' "'", '\\', '/']
-    
-    for entry in path:
-        if any(char in entry for char in invalid_characters):
-            print(f"error: invalid syntax '{args.file}'")
-            return
-    
-    if len(path) != 1:
-        for entry in path[:-1]:
-            try:
-                os.chdir(entry)
-            except FileNotFoundError:
-                print(f"error: directory '{entry}' doesn't exist in {os.getcwd()}")
-                return
-            except OSError:
-                print(f"error: invalid syntax '{args.file}'")
-                return
-    
     try:
         if not file_name.endswith(".marble"):
             print(f"error: invalid file extension '{file_name[file_name.index('.'):]}'\nvalid extension: '*.marble'")
             return
 
-        with open(f"./{file_name}", "r") as f:
+        with open(f"./{file_name}", "r", encoding="utf8") as f:
             raw_code = f.readlines()
             pre_processed_code = []
             
@@ -76,5 +54,39 @@ def path_parser():
         print("error: proccess has been interrupted")
         return
 
+
+
+
+def path_parser():
+    path = args.file.split("\\") if "\\" in args.file else args.file.split("/")
+    
+    if not path[-1]:
+        path.pop()
+
+    file_name = path[-1]    
+
+    invalid_characters = ['"', '~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')' ',', '+', '{', '}', '\\', '"', '|', '<', '>', '?', '`', '=', '[', ']', ';' "'", '\\', '/']
+    
+    for entry in path:
+        if any(char in entry for char in invalid_characters):
+            print(f"error: invalid syntax '{args.file}'")
+            return
+    
+    if len(path) != 1:
+        for entry in path[:-1]:
+            try:
+                os.chdir(entry)
+            except FileNotFoundError:
+                print(f"error: directory '{entry}' doesn't exist in {os.getcwd()}")
+                return
+            except OSError:
+                print(f"error: invalid syntax '{args.file}'")
+                return
+
+    return file_name
+    
+
+
+
 if __name__ == "__main__":
-    path_parser()
+    processor(path_parser())
