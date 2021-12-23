@@ -82,6 +82,8 @@ default:
 <br>
 `:`: Reset `duration` and `pitch_level` to `default` (i.e `pitch_level: 2`, `duration: 200`)
 # Update
+- (2021/12/23): Added `utf-8` encoding suppport. Reordered some part of the code.
+
 - (2021/12/20): Introduced [VS Code language support](https://github.com/bennett-nguyen/marlb-syntax/tree/master) for this language
 
 - (2021/12/16): Added `debug` option: use this option to see more verbose logging informations about the execution of the program, usage: `python marlb.py -m debug -f path/to/file`
