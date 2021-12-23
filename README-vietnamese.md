@@ -105,6 +105,7 @@ mặc định:
 `:`: Reset cao độ và độ dài của nốt xuống mức mặc định
 
 # Update
+- (2021/12/23): Thêm hỗ trợ `utf-8` encoding. Tách nhỏ code thành 2 phần.
 - (2021/12/20): Thêm vào [language support extension](https://marketplace.visualstudio.com/items?itemName=bennett-nguyen.marble) cho ngôn ngữ này trong VS Code, tải về để làm nổi bật cú pháp cho đẹp và dễ nhìn
 - (2021/12/16): Thêm vào mode `debug`
 - (2021/12/16): Thêm vào tính năng xử lí những thứ thừa thải có trong file script (vd: newline character, comment, whitespaces)
