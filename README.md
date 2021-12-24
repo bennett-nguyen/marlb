@@ -68,19 +68,19 @@ Any character in the list below will do a certain task to affect how notes are p
 ```
 default:
   pitch_level: 2
-  duration: 200
+  duration: 200ms
 ```
 `+`: Increase pitch level by `1` (meaning the pitch of the note will get higher, max level: `16`)
 <br>
 `-`: Decrease pitch level by `1` (meaning the pitch of the note will get lower, min level: `1`)
 <br>
-`>`: Increase duration by `100` (meaning the length of playing a note will increase, max duration: `15s`)
+`>`: Increase duration by `100ms` (meaning the length of playing a note will increase, max duration: `15s`)
 <br>
-`<`: Decrease duration by `100` (meaning the length of playing a note will decrease, min duration: `0ms`)
+`<`: Decrease duration by `100ms` (meaning the length of playing a note will decrease, min duration: `0ms`)
 <br>
-`!`: Stop the execution for 0.5 seconds
+`!`: Stop the execution for `0.5` seconds
 <br>
-`:`: Reset `duration` and `pitch_level` to `default` (i.e `pitch_level: 2`, `duration: 200`)
+`:`: Reset `duration` and `pitch_level` to `default` (i.e `pitch_level: 2`, `duration: 200ms`)
 # Update
 - (2021/12/23): Added `utf-8` encoding suppport. Reordered some part of the code.
 
