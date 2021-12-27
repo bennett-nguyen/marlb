@@ -82,6 +82,8 @@ default:
 <br>
 `:`: Reset `duration` and `pitch_level` to `default` (i.e `pitch_level: 2`, `duration: 200ms`)
 # Update
+- (2021/12/27): Used regex to match any character that this interpreter doesn't recognize (to remove it). 
+
 - (2021/12/23): Added `utf-8` encoding suppport. Reordered some part of the code.
 
 - (2021/12/20): Introduced [VS Code language support](https://github.com/bennett-nguyen/marlb-syntax/tree/master) for this language
