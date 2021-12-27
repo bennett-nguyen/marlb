@@ -1,5 +1,6 @@
 import argparse
 import os
+import re
 from utils import interpret
 
 parser = argparse.ArgumentParser()
@@ -23,24 +24,12 @@ def processor(file_name):
             pre_processed_code = []
             
             for line_number, content in enumerate(raw_code, start=1):
-                try:
-                    content = "".join(content[:content.index('"')].split())
-                    
-                    if not content:
-                        continue
-
-                    pre_processed_code.append((line_number, content))
-
-                except ValueError:
-                    if len(content) == 1 and "\n" in content:
-                        continue
-
-                    content = "".join(content.split())
-                    
-                    if "\n" in content:
-                        content = content[:-1]
-                    
-                    pre_processed_code.append((line_number, content))
+                content = re.sub("[^qweruiopasdjk!:<>\+-]", "", re.match("^[^\"]*", content).group())
+                
+                if len(content) == 1 and "\n" in content or not content:
+                    continue
+                
+                pre_processed_code.append((line_number, content))
                 
             interpret(pre_processed_code, args.mode)
 
