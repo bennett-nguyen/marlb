@@ -3,7 +3,7 @@ from time import sleep
 # !
 def stop_exec(*args, **kwargs):
     if kwargs["mode"] == "debug":
-        print("slept for 0.5 seconds")
+        print("Slept for 0.5 seconds")
     
     sleep(0.5)
 
