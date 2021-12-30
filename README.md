@@ -84,7 +84,7 @@ See [CHANGELOG.md](./CHANGELOG.md)
 
 
 # Tutorial
-Today I'll instruct you to write happy birthday in marlb for someone important to you :D
+Today I'll instruct you to write happy birthday song in marlb for someone important to you :D
 <br>
 I'll assume that you have cloned this repository and got the interpreter so let's get started.
 <br>

@@ -39,7 +39,7 @@ Chạy: `marlb -m MODE -f đường/dẫn/tới/file`
 muốn xem thêm thông tin về tham số thì gõ `--help` vào phía sau câu lệnh, vd: `marlb --help`
 <br>
 <br>
-Có một file lệnh tên `hello_world.marble` mà tôi đã viết sẵn trong cái repo này, để thông dịch nó thì cần chạy `marlb -m interpret -f ./hello_world.marble`.
+Tôi đã viết sẵn một số file lệnh trong thư mục `./test`, dùng câu lệnh tôi vừa hướng dẫn ở trên để thực thi file lệnh đó.
 <br>
 <br>
 **Chế độ (MODE)**
@@ -105,8 +105,4 @@ mặc định:
 `:`: Reset cao độ và độ dài của nốt xuống mức mặc định
 
 # Update
-- (2021/12/27): Chuyển qua xài regex để match những ký tự mà trình thông dịch này không nhận dạng được (cốt để  nó) thay vì sử dụng cách thủ công.
-- (2021/12/23): Thêm hỗ trợ `utf-8` encoding. Tách nhỏ code thành 2 phần.
-- (2021/12/20): Thêm vào [language support extension](https://marketplace.visualstudio.com/items?itemName=bennett-nguyen.marble) cho ngôn ngữ này trong VS Code, tải về để làm nổi bật cú pháp cho đẹp và dễ nhìn
-- (2021/12/16): Thêm vào mode `debug`
-- (2021/12/16): Thêm vào tính năng xử lí những thứ thừa thải có trong file script (vd: newline character, comment, whitespaces)
+xem [CHANGELOG.md](./CHANGELOG.md)
