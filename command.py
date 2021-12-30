@@ -10,7 +10,7 @@ def stop_exec(*args, **kwargs):
 
 # -
 def decrease_pitch(info, mode):
-    if not info["pitch_level"] - 1:
+    if not info["pitch_level"] - 1 and mode == 'debug':
         print(f"Lowest level of pitch reached: {info['pitch_level']}")
         return
 
