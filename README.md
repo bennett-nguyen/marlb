@@ -18,13 +18,11 @@ Interpret a file to sounds using the command:
 `python marlb.py -m interpret -f path/to/file`
 <br>
 <br>
-There's a script file I wrote in this repository, it's `hello_world.marble` so do:
+I wrote some script files and stored it in `./test`, run whatever script you want
 <br>
-`python marlb.py -m interpret -f hello_world.marble`
-<br>to run the script file
 
 # Syntax
-**Comment**: notated using `"`, any code that stands after `"` will be ignored (although any character that this interpreter doesn't recognize will be considered as a comment as well, using a comment notation is still a best practice)
+**Comment**: notated by `"`, any code that stands after `"` will be ignored (although any character that this interpreter doesn't recognize will be considered as a comment as well, using a comment notation is still a best practice)
 <br><br>
 **Playing notes**:
 Any character in the list below will play a specific note
@@ -82,14 +80,7 @@ default:
 <br>
 `:`: Reset `duration` and `pitch_level` to `default` (i.e `pitch_level: 2`, `duration: 200ms`)
 # Update
-- (2021/12/27): Used regex to match any character that this interpreter doesn't recognize (to remove it). 
-
-- (2021/12/23): Added `utf-8` encoding suppport. Reordered some part of the code.
-
-- (2021/12/20): Introduced [VS Code language support](https://github.com/bennett-nguyen/marlb-syntax/tree/master) for this language
-
-- (2021/12/16): Added `debug` option: use this option to see more verbose logging informations about the execution of the program, usage: `python marlb.py -m debug -f path/to/file`
-- (2021/12/16): Added a feature to pre-process raw code (code taken from the script file) to remove any newline characters, whitespaces, and comments
+See [CHANGELOG.md](./CHANGELOG.md)
 
 
 # Tutorial
@@ -124,7 +115,7 @@ Now save your file and copy the path that leads to your file as text and open `p
 `python marlb.py -m interpret -f paste/the/path/here`
 <br>
 <br>
-In my case, both the interpreter and my text file are in `D:\work_dir_3` so my command would be like:
+In my case, both the interpreter and my source file are in `D:\work_dir_3` (i.e same directory) so my command would be like:
 <br>
 ```
 >>> D:\
