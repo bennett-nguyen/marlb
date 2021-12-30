@@ -2,7 +2,7 @@
 This is the executable version of the interpreter that doesn't require you to have python or any python package installed.
 
 # Make this interpreter accessible on anywhere
-To make this interpreter accessible on the command prompt, copy the path lead to the bin folder (which contains this executable interpreter) and paste it to the enviroment variable Windows settings. For example, here is my `bin` folder path: `D:\work_dir_3\bin`
+To make this interpreter accessible on your terminal emulator, copy the path lead to the bin folder (which contains this executable interpreter) and paste it to the environment variable Windows settings. For example, here is my `bin` folder path: `D:\work_dir_3\bin`
 
 Open Settings > Systems > About > Advanced system settings
 <br><br>
@@ -12,7 +12,7 @@ You'll be greeted with this window
 ![image](https://user-images.githubusercontent.com/83117848/146327853-b00af549-9e70-433e-942f-bb5f318f66aa.png)
 <br>
 <br>
-Press `Enviroment Variables` and you'll see this screen
+Press `Environment Variables` and you'll see this screen
 <br>
 <br>
 ![image](https://user-images.githubusercontent.com/83117848/146328242-228fc577-08c1-47f8-8f23-e41b939e3154.png)
