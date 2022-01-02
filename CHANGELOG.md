@@ -1,4 +1,5 @@
 # CHANGELOG
+- (2022/01/02): Compress the compact version to 41 lines
 - (2021/12/30): Added missing condition in `./src/command.py` -> `line 13`
 
 - (2021/12/29): Compacted version of this interpreter is now available, the file weighs in at 2542 bytes and 44 lines long
