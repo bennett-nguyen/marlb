@@ -1,31 +1,29 @@
-def Y(**B):B['m']==D and A('Slept for 0.5 seconds');sleep(0.5)
-def d(i,m):i[B]=200;i[C]=2;m==D and A('Set duration and pitch level to default')
-def Z(i,m):c=i[C]-1;not c and m==D and A(f'Lowest level of pitch reached: {i[C]}');i[C]=i[C]-1 if c else i[C];m==D and c and A(f'Decreased pitch to level: {i[C]}')
-def a(i,m):c=i[C]+1==17;A(f'Reached highest pitch possible: {i[C]}') if c and m==D else None;i[C]=i[C]+1 if not c else i[C];m==D and not c and A(f'Increased pitch to level: {i[C]}')
-def b(i,m):c=i[B]-100<0;A(f'Reached lowest duration possible: {i[B]}ms') if c and m==D else None;i[B]=i[B]-100 if not c else i[B];not c and m==D and A(f'Decreased duration to: {i[B]}ms')
-def c(i,m):c=i[B]+100>15000;A(f'Reached highest duration possible: {i[B]}ms') if c and m==D else None;i[B]=i[B]+100 if not c else i[B];not c and m==D and A(f'Increased duration to: {i[B]}ms')
-def e(a,m):
- for K in a:L,G=K;m==D and A(f"\nexecuting line {L}: {G}");[J.Beep(H[E]*F[C],F[B])if E in H else E in I and I[E](i=F,m=m)for E in G]
-o='>';n='<';m='+';l='!';k=True;j='r';i=FileNotFoundError;h=len;D='debug';C='pitch_level';B='duration';A=print;import winsound as J,argparse as K,os,re;from time import sleep;L=440;M=466;N=494;O=262;P=277;Q=294;R=311;S=330;T=349;U=370;V=392;W=415;X=524;H={'q':O,'a':P,'w':Q,'s':R,'e':S,j:T,'d':U,'u':V,'j':W,'i':L,'k':M,'o':N,'p':X};F={B:200,C:2};G=K.ArgumentParser();G.add_argument('-m','--m',choices=['interpret',D],required=k);G.add_argument('-f','--f',required=k);E=G.parse_args();I={l:Y,'-':Z,m:a,n:b,o:c,':':d}
-def f(x):
- if not x:return
- try:
-  if not x.endswith('.marble'):A(f"error: invalid file extension '{x[x.index('.'):]}'\nvalid extension: '*.marble'");return
-  with open(f"./{x}",j,encoding='utf8')as F:
-   G=F.readlines();D=[]
-   for (H,C) in enumerate(G,start=1):C=re.sub('[^qweruiopasdjk!:<>\\+-]','',re.match('^[^"]*',C).group());D.append((H,C))if(not '\n'in C or not h(C)==1)and C else None
-   e(D,E.m)
- except i:A(f"error: file '{x}' not found in {os.getcwd()}");return
- except ValueError:A(f"error: '{x}' is not recognized as a file");return
- except KeyboardInterrupt:A('error: proccess has been interrupted');return
-def g():
- I='"';H='/';D='\\';B=E.f.split(D)if D in E.f else E.f.split(H);not B[-1]and B.pop();F=B[-1];G=[I,'~',l,'@','#','$','%','^','&','*','(','),',m,'{','}',D,I,'|',n,o,'?','`','=','[',']',";",D,H]
- for C in B:
-  if any((A in C for A in G)):A(f"error: invalid syntax '{E.f}'");return
- if h(B)!=1:
-  for C in B[:-1]:
-   try:os.chdir(C)
-   except i:A(f"error: directory '{C}' doesn't exist in {os.getcwd()}");return
-   except OSError:A(f"error: invalid syntax '{E.f}'");return
- return F
-f(g())
+def V(t):J(t);return F
+def W(**B):B['m']==D and A('Slept for 0.5 seconds');sleep(0.5)
+def X(i,m):i[C]=200;i[B]=2;m==D and A('Set duration and pitch level to default')
+def Y(i,m):C=i[B]-1;not C and m==D and A(f"Lowest level of pitch reached: {i[B]}");i[B]=i[B]-1 if C else i[B];m==D and C and A(f"Decreased pitch to level: {i[B]}")
+def Z(i,m):C=i[B]+1==17;A(f"Reached highest pitch possible: {i[B]}")if C and m==D else G;i[B]=i[B]+1 if not C else i[B];m==D and not C and A(f"Increased pitch to level: {i[B]}")
+def a(i,m):B=i[C]-100<0;A(f"Reached lowest duration possible: {i[C]}ms")if B and m==D else G;i[C]=i[C]-100 if not B else i[C];not B and m==D and A(f"Decreased duration to: {i[C]}ms")
+def b(i,m):B=i[C]+100>15000;A(f"Reached highest duration possible: {i[C]}ms")if B and m==D else G;i[C]=i[C]+100 if not B else i[C];not B and m==D and A(f"Increased duration to: {i[C]}ms")
+def c(a,m):
+	for F in a:G,E=F;m==D and A(f"\nexecuting line {G}: {E}");[d.Beep(S[A]*H[B],H[C])if A in S else A in T and T[A](i=H,m=m)for A in E]
+def U(H,B,G,Q,F,C):
+	for (H,B) in enumerate(G,start=1):B=re.sub('[^qweruiopasdjk!:<>\\+-]','',re.match('^[^"]*',B).group());C.append((H,B))if(not'\n'in B or not Q(B)==1)and B else F
+J=print;F=None;G=F;K='>';L='<';M='+';N='!';O=True;P='r';Q=FileNotFoundError;R=len;D='debug';B='pitch_level';C='duration';A=J;import winsound as d,argparse as e,os,re;from time import sleep;f=440;g=466;h=494;i=262;j=277;k=294;l=311;m=330;n=349;o=370;p=392;q=415;r=524;S={'q':i,'a':j,'w':k,'s':l,'e':m,P:n,'d':o,'u':p,'j':q,'i':f,'k':g,'o':h,'p':r};H={C:200,B:2};I=e.ArgumentParser();I.add_argument('-m','--m',choices=['interpret',D],required=O);I.add_argument('-f','--f',required=O);E=I.parse_args();T={N:W,'-':Y,M:Z,L:a,K:b,':':X}
+def s(x):
+	if not x:return
+	try:
+		if not x.endswith('.marble'):A(f"error: invalid file extension '{x[x.index('.'):]}'\nvalid extension: '*.marble'");return
+		with open(f"./{x}",P,encoding='utf8')as D:F=D.readlines();C=[];U(H,B,F,R,G,C);c(C,E.m)
+	except Q:A(f"error: file '{x}' not found in {os.getcwd()}");return
+	except ValueError:A(f"error: '{x}' is not recognized as a file");return
+	except KeyboardInterrupt:A('error: proccess has been interrupted');return
+def t():
+	D='"';G='/';C='\\';B=E.f.split(C)if C in E.f else E.f.split(G);not B[-1]and B.pop();J=B[-1];O=[D,'~',N,'@','#','$','%','^','&','*','(','),',M,'{','}',C,D,'|',L,K,'?','`','=','[',']',";'",C,G];H=[V(f"error: invalid syntax '{E.f}'")for A in B if any((B in A for B in O))]
+	if R(B)!=1 and F not in H:
+		for I in B[:-1]:
+			try:os.chdir(I)
+			except Q:A(f"error: directory '{I}' doesn't exist in {os.getcwd()}");return
+			except OSError:A(f"error: invalid syntax '{E.f}'");return
+	return J if F not in H else F
+s(t())
